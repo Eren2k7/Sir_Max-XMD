@@ -4,7 +4,7 @@
   "description": "Bot WhatsApp + Telegram: Sir_Max-XMD",
   "main": "telegramBot.js",
   "scripts": {
-    "start": "node telegramBot.js"
+    "start": "node index.js"
   },
   "engines": {
     "node": ">=20.0.0"
