@@ -3,7 +3,7 @@
 const { Telegraf } = require('telegraf');
 
 // Remplace 'TON_TOKEN_ICI' par le vrai token de ton bot Telegram
-const bot = new Telegraf(process.env.BOT_TOKEN || 'TON_TOKEN_ICI');
+const bot = new Telegraf(process.env.BOT_TOKEN || '7953723093:AAHM43KNzzQgT10vlZTJ1S2e5LzklPvOMH4');
 
 // Commande de démarrage
 bot.start((ctx) => {
