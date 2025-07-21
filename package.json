@@ -1,19 +1,12 @@
 {
-  "name": "sir-max-xmd",
+  "name": "telegram-bot",
   "version": "1.0.0",
-  "description": "Bot WhatsApp + Telegram: Sir_Max-XMD",
+  "description": "Bot Telegram sur Render",
   "main": "telegramBot.js",
   "scripts": {
-    "start": "node index.js"
-  },
-  "engines": {
-    "node": ">=20.0.0"
+    "start": "node telegramBot.js"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.7.18",
-    "axios": "^1.6.0",
-    "pino": "^8.0.0",
-    "telegraf": "^4.16.0"
-  },
-  "license": "MIT"
+    "node-telegram-bot-api": "^0.61.0"
+  }
 }
