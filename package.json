@@ -1,16 +1,19 @@
 {
   "name": "sir-max-xmd",
   "version": "1.0.0",
-  "main": "whatsappBot.js",
+  "description": "Bot WhatsApp + Telegram: Sir_Max-XMD",
+  "main": "telegramBot.js",
   "scripts": {
-    "start": "node whatsappBot.js"
-  },
-  "dependencies": {
-    "@whiskeysockets/baileys": "^6.7.18",
-    "pino": "^8.0.0",
-    "axios": "^1.6.0"
+    "start": "node telegramBot.js"
   },
   "engines": {
     "node": ">=20.0.0"
-  }
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.18",
+    "axios": "^1.6.0",
+    "pino": "^8.0.0",
+    "telegraf": "^4.16.0"
+  },
+  "license": "MIT"
 }
