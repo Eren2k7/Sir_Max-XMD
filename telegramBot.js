@@ -1,35 +1,12 @@
-// telegramBot.js
+const TelegramBot = require("node-telegram-bot-api");
 
-const { Telegraf } = require('telegraf');
+// Utilise ton vrai token ici
+const token = process.env.BOT_TOKEN || "7953723093:AAHM43KNzzQgT10vlZTJ1S2e5LzklPvOMH4";
 
-// Remplace 'TON_TOKEN_ICI' par le vrai token de ton bot Telegram
-const bot = new Telegraf(process.env.BOT_TOKEN || '7953723093:AAHM43KNzzQgT10vlZTJ1S2e5LzklPvOMH4');
+// Active le bot en mode polling
+const bot = new TelegramBot(token, { polling: true });
 
-// Commande de démarrage
-bot.start((ctx) => {
-  ctx.reply(`👋 Salut ${ctx.from.first_name} ! Bienvenue sur mon bot Telegram.`);
+// Une simple commande pour tester
+bot.onText(/\/start/, (msg) => {
+  bot.sendMessage(msg.chat.id, "Hello ! Le bot fonctionne !");
 });
-
-// Commande d'aide
-bot.help((ctx) => {
-  ctx.reply("Voici les commandes disponibles:\n/start - Démarrer\n/help - Aide\n/ping - Vérifier si le bot fonctionne");
-});
-
-// Commande ping
-bot.command('ping', (ctx) => {
-  ctx.reply("🏓 Pong !");
-});
-
-// Message non reconnu
-bot.on('text', (ctx) => {
-  ctx.reply("Je n'ai pas compris 😅 Tape /help pour voir les commandes.");
-});
-
-// Lancer le bot
-bot.launch()
-  .then(() => console.log("✅ Bot Telegram lancé avec succès"))
-  .catch((err) => console.error("❌ Erreur lors du démarrage du bot :", err));
-
-// Graceful stop (optionnel pour Render)
-process.once('SIGINT', () => bot.stop('SIGINT'));
-process.once('SIGTERM', () => bot.stop('SIGTERM'));
