@@ -1,7 +1,6 @@
 {
   "name": "telegram-bot",
   "version": "1.0.0",
-  "description": "Bot Telegram sur Render",
   "main": "telegramBot.js",
   "scripts": {
     "start": "node telegramBot.js"
