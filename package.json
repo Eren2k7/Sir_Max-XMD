@@ -1,5 +1,5 @@
 {
-  "name": "telegram-bot",
+  "name": "sir-max-xmd",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,3 +9,4 @@
     "express": "^4.18.2",
     "node-telegram-bot-api": "^0.61.0"
   }
+}
